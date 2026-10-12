@@ -58,7 +58,6 @@ nav a:hover{color:#1c3433}
 .section-heading h2,.about-section h2,.evidence-card h2,.contact-strip h2{font-size:clamp(38px,5vw,58px);letter-spacing:-.04em;margin:10px 0 0}
 .section-heading>p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.6;margin:0}
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.project-card.featured{grid-column:span 2}
 .project-card.has-shot{background:linear-gradient(180deg,rgba(255,254,251,.05) 0%,rgba(255,254,251,.25) 32%,rgba(255,254,251,.93) 58%,#fffefb 76%),var(--shot) var(--shot-pos,center top)/cover no-repeat,var(--panel)}
 @media(max-width:1000px){.project-grid{grid-template-columns:repeat(2,1fr)}}
 .project-card{min-height:290px;display:flex;flex-direction:column;background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:15px;padding:20px;color:inherit;text-decoration:none;transition:.25s transform,.25s border-color,.25s box-shadow}
@@ -140,7 +139,7 @@ a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
   .site{padding:0 17px}.topbar{height:64px;gap:12px}.availability{display:none}.header-actions{gap:0}nav{gap:15px;max-width:66%;overflow:auto;white-space:nowrap}nav a{font-size:10px}.brand{font-size:16px}.brand-mark{width:26px;height:26px}.header-cta{padding:8px 10px;font-size:9px}
   .hero{min-height:auto;grid-template-columns:1fr;gap:36px;padding:70px 0 54px}.hero h1{font-size:clamp(53px,16vw,76px);margin:18px 0}.hero-lead{font-size:16px}.hero-text{font-size:14px}.hero-panel{max-width:520px}.hero-proof{gap:10px 14px}
   .metrics{grid-template-columns:1fr 1fr;gap:0}.metric{padding:15px 12px}.metric:nth-child(2){border-right:0}.metric:nth-child(3),.metric:nth-child(4){border-top:1px solid var(--line)}.metric strong{font-size:25px}
-  .section{padding:70px 0}.section-heading{display:block}.section-heading>p{margin-top:12px}.project-grid{grid-template-columns:1fr}.project-card.featured{grid-column:auto}.project-card{min-height:225px}.sub-heading{display:block}.sub-heading>p{margin-top:12px}
+  .section{padding:70px 0}.section-heading{display:block}.section-heading>p{margin-top:12px}.project-grid{grid-template-columns:1fr}.project-card{min-height:225px}.sub-heading{display:block}.sub-heading>p{margin-top:12px}
   .evidence-card{padding:27px;display:block}.bug-mark{display:none}.evidence-card>div p{font-size:14px}.verified{margin-left:0}.about-section{grid-template-columns:1fr;gap:15px}.contact-strip{display:block;padding:45px 0}.contact-strip .btn{margin-top:18px}
   footer{flex-direction:column}
 }
