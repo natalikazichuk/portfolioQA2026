@@ -3,5 +3,6 @@
   {"id":"navkolo","title":"Navkolo","icon":"📊","status":"TESTED","type":"SaaS · Accounting & Trade","featured":false,"image":"projects/navkolo.webp"},
   {"id":"guru99","title":"Guru99 Bank","icon":"🏦","status":"TESTED","type":"Banking Web App · Training","featured":false,"image":"projects/guru99.webp","imagePosition":"left center"},
   {"id":"snake-eye","title":"Snake Eye","icon":"🐍","status":"IN PROGRESS","type":"Data / Web Project","featured":false,"image":"projects/snake-eye.webp","imagePosition":"left top"},
-  {"id":"schoolkingdoms","title":"SchoolKingdoms","icon":"🏫","status":"LIVE DEMO","type":"Educational Platform","featured":false,"image":"projects/schoolkingdoms.webp"}
+  {"id":"schoolkingdoms","title":"SchoolKingdoms","icon":"🏫","status":"LIVE DEMO","type":"Educational Platform","featured":false,"image":"projects/schoolkingdoms.webp"},
+  {"id":"rozklad","title":"Rozklad","icon":"📅","status":"LIVE","type":"Family Schedule Planner · Web App","featured":false,"image":"projects/rozklad.webp"}
 ]

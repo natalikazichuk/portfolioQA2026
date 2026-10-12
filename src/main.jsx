@@ -12,7 +12,8 @@ const projectLinks = {
   guru99: 'https://github.com/natalikazichuk/portfolioQA2026/blob/main/docs/guru99/README.md',
   'snake-eye': 'https://github.com/natalikazichuk/Snake-Eye',
   // демо-версія (1 клас, без реєстрації); повний код — natalikazichuk/schoolkingdoms
-  schoolkingdoms: 'https://natalikazichuk.github.io/schoolkingdoms-demo/'
+  schoolkingdoms: 'https://natalikazichuk.github.io/schoolkingdoms-demo/',
+  rozklad: 'https://natalikazichuk.github.io/rozklad/'
 };
 
 const projectTitle = Object.fromEntries(projects.map(p => [p.id, p.title]));
