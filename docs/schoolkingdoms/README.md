@@ -4,6 +4,9 @@
 **Role:** QA + product owner · **Stack under test:** static web (GitHub Pages) · Firebase Auth + Firestore · admin panel
 **Environment:** Web (desktop + mobile), Chrome / Safari · main @ prod
 
+## Test automation
+Permanent suite in CI on every PR: static audit, unit tests, Playwright smoke of every page, 7 e2e flows with a stubbed backend, mutation checks of the tests themselves → [AUTOMATION.md](AUTOMATION.md)
+
 ## Defects
 | ID | Title | Severity | Status |
 |---|---|---|---|

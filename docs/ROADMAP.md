@@ -10,7 +10,7 @@ VeteranJobPortal case study, Snake Eye, SchoolKingdoms, QA documentation links.
 QA Quest map, Bug Hunt, Bug Report form, Bug Museum.
 
 ## V4 — QA Evidence
-API Lab, AI Lab, Playwright e2e + CI badge, downloadable QA documentation.
+API Lab, AI Lab, Playwright e2e + CI badge (✅ e2e + CI done in SchoolKingdoms: [docs/schoolkingdoms/AUTOMATION.md](schoolkingdoms/AUTOMATION.md)), downloadable QA documentation.
 
 ## V5 — Polish
 Achievements, Easter eggs, accessibility, performance (Lighthouse >= 90), EN/UA.

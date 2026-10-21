@@ -10,7 +10,7 @@ QA NK is a portfolio that demonstrates QA skills through an interactive product 
 - Navkolo — business SaaS, registration/login checklist, user scenarios, API checks ([case study](docs/navkolo/README.md))
 - Guru99 Bank — training project: New Customer form test cases, Jira bug reports, requirements checklist ([docs](docs/guru99/README.md))
 - Snake Eye — web/data project
-- SchoolKingdoms — educational platform ([case study](docs/schoolkingdoms/README.md): bug report SK-BUG-143)
+- SchoolKingdoms — educational platform ([case study](docs/schoolkingdoms/README.md): bug report SK-BUG-143, [test automation](docs/schoolkingdoms/AUTOMATION.md): Playwright e2e + CI)
 
 ## Roadmap
 - [ ] Portfolio shell
