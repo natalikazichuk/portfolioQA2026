@@ -4,6 +4,7 @@
     {"name":"Test Case Design","level":92,"icon":"📋","projects":["veteran-job-portal","guru99","navkolo"],"background":["retail"],"note":"40 test cases + RTM 24/24, 30 field-level cases, boundary-value checklists"},
     {"name":"Bug Reporting","level":95,"icon":"🐞","projects":["veteran-job-portal","navkolo","guru99","schoolkingdoms"],"background":["privatbank"],"note":"High bug in VJP with verified fix, 9 defects in Navkolo, Jira reports"},
     {"name":"Exploratory Testing","level":90,"icon":"🔎","projects":["navkolo","schoolkingdoms"],"background":["retail"],"note":"Requirements rebuilt from help pages when there was no spec"},
+    {"name":"Test Automation","level":80,"icon":"⚙️","projects":["schoolkingdoms"],"background":[],"note":"Playwright e2e (7 flows, stubbed backend), smoke of every page, unit tests, GitHub Actions CI, mutation checks","caseLink":{"title":"Automation case","href":"https://github.com/natalikazichuk/portfolioQA2026/blob/main/docs/schoolkingdoms/AUTOMATION.md"}},
     {"name":"API Testing","level":82,"icon":"🔌","projects":["navkolo"],"background":[],"note":"Postman + Chrome DevTools: registration endpoint, 400 validation responses"},
     {"name":"AI / LLM Evaluation","level":85,"icon":"🤖","projects":[],"background":[],"note":"Evaluating AI responses for accuracy, relevance and safety"},
     {"name":"Domain: fintech & trade","icon":"🏦","projects":["guru99","navkolo"],"background":["privatbank","avtoritet","retail"],"note":"Loans, cards, warehouses, invoices and sales documents known from the inside"}
@@ -15,7 +16,7 @@
     {"name":"Persistence","background":["avtoritet"],"projects":["veteran-job-portal"],"from":"Hearing the concern behind a \"no\" and answering with facts","qa":"Defending bug severity and following a High bug to a verified fix"},
     {"name":"Trustworthiness","background":["privatbank"],"projects":["guru99"],"from":"A corporate culture of honesty and personal responsibility","qa":"Reporting risks as they are, e.g. a raw DB error exposing the DB user"},
     {"name":"Teamwork","background":["avtoritet","retail"],"projects":["veteran-job-portal"],"from":"Many stakeholders, staff training, every request followed to closure","qa":"Testing three roles (Guest, Veteran, Recruiter) end to end"},
-    {"name":"Adaptability & active learning","background":["privatbank","avtoritet","retail"],"projects":["schoolkingdoms"],"from":"Banking → B2B sales → retail: a new domain each time","qa":"Picked up Playwright for a 39/39 smoke test"},
+    {"name":"Adaptability & active learning","background":["privatbank","avtoritet","retail"],"projects":["schoolkingdoms"],"from":"Banking → B2B sales → retail: a new domain each time","qa":"Picked up Playwright: from a smoke test to e2e flows in CI"},
     {"name":"Initiative","background":["retail"],"projects":["schoolkingdoms"],"from":"Running the sales floor and setting up checklists","qa":"QA and product owner of my own learning platform"}
   ]
 }

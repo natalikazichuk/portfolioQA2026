@@ -65,8 +65,8 @@ Profile → Add profile section → Recommended → Add projects. Дати не 
   > Skills: Test Cases · Jira · Boundary & Negative Testing
 
 - [ ] **SchoolKingdoms — gamified learning platform**
-  > Testing of a platform for kids with roles, tests, trainers and mini-games. Built a public demo version with a Chromium smoke test (39/39 pages pass) that also caught missing assets in the full app.
-  > Skills: Smoke Testing · Playwright · UI Testing
+  > Testing of a platform for kids with roles, tests, trainers and mini-games. Built a public demo version with a Chromium smoke test (39/39 pages pass) that also caught missing assets in the full app. Built a permanent test suite in GitHub Actions: static audit, unit tests, Playwright smoke and 7 e2e user flows with a stubbed backend, verified by mutation checks.
+  > Skills: Smoke Testing · Playwright · E2E Testing · Test Automation · CI/CD · UI Testing
 
 - [ ] Snake Eye — додати, коли проєкт буде готовий
 

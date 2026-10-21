@@ -21,13 +21,14 @@ const jobShort = Object.fromEntries(experience.jobs.map(j => [j.id, j.short]));
 const softSkills = skills.soft.map(s => s.name);
 const skillsFromJob = id => [...skills.hard, ...skills.soft].filter(s => s.background.includes(id)).map(s => s.name);
 
-function SkillLinks({ projects: ids, background }) {
+function SkillLinks({ projects: ids, background, caseLink }) {
   if (!ids.length && !background.length) return <div className="skill-links"><span className="chip-soon">Case study coming soon</span></div>;
   return <div className="skill-links">
     {ids.map(id => projectLinks[id]
       ? <a className="chip-project" key={id} href={projectLinks[id]} target="_blank" rel="noopener noreferrer">{projectTitle[id]} ↗</a>
       : <b className="chip-project" key={id}>{projectTitle[id]}</b>)}
     {background.map(id => <a className="chip-job" key={id} href="#background">{jobShort[id]}</a>)}
+    {caseLink && <a className="chip-project" href={caseLink.href} target="_blank" rel="noopener noreferrer">{caseLink.title} ↗</a>}
   </div>;
 }
 
@@ -164,7 +165,7 @@ function Home() {
               <div className="skill-head"><span>{s.icon} {s.name}</span>{s.level && <b>{s.level}%</b>}</div>
               {s.level && <div className="bar"><i style={{width:s.level+'%'}} /></div>}
               <p className="skill-note">{s.note}</p>
-              <SkillLinks projects={s.projects} background={s.background} />
+              <SkillLinks projects={s.projects} background={s.background} caseLink={s.caseLink} />
             </div>)}
           </div>
           <div className="skill-group">
@@ -270,7 +271,7 @@ const resumeProjects = [
   ['veteran-job-portal', 'Job platform · 3 roles', 'Test plan, 24 user stories, 69 scenarios, 40 test cases, RTM 24/24. Found a High bug: guest applications not visible to the recruiter; fix verified.'],
   ['navkolo', 'Business SaaS · accounting & trade', 'Exploratory and API testing (Postman, DevTools) without a spec. 9 defects, 2 High: e.g. registration accepted a mismatched password confirmation.'],
   ['guru99', 'Banking web app', '30 test cases for the New Customer form (17 pass / 13 fail), Jira bug reports, retest on v2.0. Found a raw DB error exposing the DB user.'],
-  ['schoolkingdoms', 'Gamified learning platform', 'QA + product owner. Public demo with a Playwright smoke test, 39/39 pages pass; bug report SK-BUG-143 fixed.']
+  ['schoolkingdoms', 'Gamified learning platform', 'QA + product owner. Test automation in CI on every PR: Playwright smoke of every page, 7 e2e flows with a stubbed backend, unit tests, mutation checks; bug report SK-BUG-143 fixed.']
 ];
 
 /* Резюме: на екрані в Recruiter mode і на друк (одна сторінка A4). */
