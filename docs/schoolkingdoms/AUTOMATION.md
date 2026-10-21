@@ -11,7 +11,7 @@ A permanent automated test suite that runs on **every pull request** in GitHub A
 |---|---|---|---|
 | **Static audit** | `static-audit.mjs` (Node, no browser) | JS syntax in every page and script, CSS brace balance, broken local `src`/`href`, the same shared file included with different `?v=N`, `<html lang>` / `<title>` / viewport | Typos that break a whole page, stale cache-busting versions, missing files |
 | **Unit** | `node:test` (13 suites, server + analytics) | Battle skills, shop stock, trades, avatar queue, learning analytics (`sk-insights.js`): mastery %, trends, topic statuses, "most common mistakes" | Wrong numbers in game rules and in the learning report |
-| **Smoke** | `site-smoke.mjs` (Playwright) | Opens every HTML page as a guest; collects uncaught JS errors and local 4xx/5xx files | A page that crashes on load, a missing script or style |
+| **Smoke** | `site-smoke.mjs` (Playwright) | Opens every HTML page as a guest (**132/132 pass**); collects uncaught JS errors and local 4xx/5xx files | A page that crashes on load, a missing script or style |
 | **E2E flows** | `flows-e2e.mjs` (Playwright) | 7 user scenarios with known data (below) | Logic that renders without errors but shows the wrong result |
 | **Demo smoke** | `demo-smoke.mjs` | Builds the public demo and opens every page | The public demo breaking after a change in the main app |
 
