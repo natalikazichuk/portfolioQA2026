@@ -46,7 +46,8 @@ function useView() {
     window.addEventListener('hashchange', onChange);
     return () => window.removeEventListener('hashchange', onChange);
   }, []);
-  useEffect(() => window.scrollTo(0, 0), [view]);
+  // scrollTo у нових браузерах повертає Promise, а React вважає повернене значення функцією очищення і падає.
+  useEffect(() => { window.scrollTo(0, 0); }, [view]);
   return view;
 }
 
