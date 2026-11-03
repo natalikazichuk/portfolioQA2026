@@ -197,3 +197,15 @@ a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
   .rs-item-head span,.rs-muted{font-size:8.5pt}
   .rs-cols{grid-template-columns:1.75fr 1fr;gap:18pt}
 }
+
+/* Розгортні секції: заголовок — кнопка, що відкриває блок */
+.section-toggle{width:100%;border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;margin-bottom:0}
+.section-toggle h2{display:flex;align-items:center;gap:14px}
+.toggle-icon{display:inline-grid;place-items:center;width:.9em;height:.9em;font-size:.55em;line-height:1;border:1px solid var(--line);border-radius:50%;color:var(--cyan);transition:transform .25s ease,background .2s,border-color .2s}
+.section-toggle:hover .toggle-icon{background:var(--panel);border-color:var(--cyan)}
+.section-toggle:hover h2{color:var(--cyan2)}
+.section-toggle:focus-visible{outline:2px solid var(--cyan);outline-offset:6px;border-radius:8px}
+.collapsible.is-open .toggle-icon{transform:rotate(180deg)}
+.collapsible.is-open .section-toggle{margin-bottom:32px}
+.collapsible:not(.is-open){padding-top:36px;padding-bottom:36px;border-bottom:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.toggle-icon{transition:none}}

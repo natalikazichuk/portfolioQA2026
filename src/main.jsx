@@ -103,6 +103,35 @@ function ProjectCard({p,index}) {
   );
 }
 
+// Розгортний блок: заголовок секції відкриває/закриває її вміст.
+// Посилання з меню (#projects, #skills, #background, #checklists) відкривають потрібний блок.
+const sectionForHash = { projects: 'projects', skills: 'skills', background: 'skills', checklists: 'checklists' };
+
+function Collapsible({ id, eyebrow, title, intro, className = '', children }) {
+  const [open, setOpen] = useState(() => sectionForHash[window.location.hash.slice(1)] === id);
+  useEffect(() => {
+    const onHash = () => {
+      const h = window.location.hash.slice(1);
+      if (sectionForHash[h] !== id) return;
+      setOpen(true);
+      requestAnimationFrame(() => document.getElementById(h)?.scrollIntoView({ block: 'start' }));
+    };
+    onHash();
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, [id]);
+  const bodyId = id + '-body';
+  return (
+    <section id={id} className={'section collapsible ' + (open ? 'is-open ' : '') + className}>
+      <button type="button" className="section-heading section-toggle" aria-expanded={open} aria-controls={bodyId} onClick={() => setOpen(o => !o)}>
+        <div><div className="eyebrow">{eyebrow}</div><h2>{title} <span className="toggle-icon" aria-hidden="true">⌄</span></h2></div>
+        <p>{intro}</p>
+      </button>
+      <div id={bodyId} className="collapsible-body" hidden={!open}>{children}</div>
+    </section>
+  );
+}
+
 function Home() {
   return (
     <>
@@ -141,19 +170,13 @@ function Home() {
         <Metric value="50+" label="API CHECKS" />
       </section>
 
-      <section id="projects" className="section">
-        <div className="section-heading">
-          <div><div className="eyebrow">01 / EXPERIENCE</div><h2>QA Projects</h2></div>
-          <p>Hands-on testing across web applications, a business SaaS, a banking app, data projects and an educational platform.</p>
-        </div>
+      <Collapsible id="projects" eyebrow="01 / EXPERIENCE" title="QA Projects"
+        intro="Hands-on testing across web applications, a business SaaS, a banking app, data projects and an educational platform.">
         <div className="project-grid">{projects.map((p,i)=><ProjectCard p={p} index={i} key={p.id}/>)}</div>
-      </section>
+      </Collapsible>
 
-      <section id="skills" className="section skills-section">
-        <div className="section-heading">
-          <div><div className="eyebrow">02 / CAPABILITIES &amp; BACKGROUND</div><h2>QA Skills</h2></div>
-          <p>Each skill is linked to the projects where I used it and to the job before QA where it comes from.</p>
-        </div>
+      <Collapsible id="skills" className="skills-section" eyebrow="02 / CAPABILITIES & BACKGROUND" title="QA Skills"
+        intro="Each skill is linked to the projects where I used it and to the job before QA where it comes from.">
         <div className="skill-legend">
           <span><b className="chip-project">Project</b> applied in</span>
           <span><b className="chip-job">Job</b> comes from</span>
@@ -162,8 +185,7 @@ function Home() {
           <div className="skill-group">
             <div className="skill-group-head"><span className="eyebrow">HARD / TECH SKILLS</span><small>{skills.hard.length}</small></div>
             {skills.hard.map(s=><div className="skill-card" key={s.name}>
-              <div className="skill-head"><span>{s.icon} {s.name}</span>{s.level && <b>{s.level}%</b>}</div>
-              {s.level && <div className="bar"><i style={{width:s.level+'%'}} /></div>}
+              <div className="skill-head"><span>{s.icon} {s.name}</span></div>
               <p className="skill-note">{s.note}</p>
               <SkillLinks projects={s.projects} background={s.background} caseLink={s.caseLink} />
             </div>)}
@@ -201,13 +223,10 @@ function Home() {
             </article>)}
           </div>
         </div>
-      </section>
+      </Collapsible>
 
-      <section id="checklists" className="section checklists-section">
-        <div className="section-heading">
-          <div><div className="eyebrow">03 / CHECKLISTS</div><h2>My Checklists</h2></div>
-          <p>Printable A4 checklists I use for manual testing. Click a page to open it full size.</p>
-        </div>
+      <Collapsible id="checklists" className="checklists-section" eyebrow="03 / CHECKLISTS" title="My Checklists"
+        intro="Printable A4 checklists I use for manual testing. Click a page to open it full size.">
         {checklists.map(c => <article className="checklist-card" key={c.id}>
           <div className="checklist-head">
             <h3>{c.title}</h3>
@@ -224,7 +243,7 @@ function Home() {
             })}
           </div>
         </article>)}
-      </section>
+      </Collapsible>
 
       <section id="evidence" className="section evidence-section">
         <div className="evidence-card">
