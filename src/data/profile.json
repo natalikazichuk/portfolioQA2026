@@ -7,6 +7,6 @@
     "Tested five products across different domains: job portal, accounting & trade SaaS, banking app, trading web app, gamified education platform.",
     "Work with user stories, acceptance criteria, test cases, checklists, traceability matrices and bug reports."
   ],
-  "tools": ["Postman", "Chrome DevTools", "Playwright", "GitHub", "Google Sheets"],
+  "tools": ["Postman", "Chrome DevTools", "Playwright", "GitHub", "Windows Command Prompt (CMD)", "PowerShell", "Google Sheets"],
   "links": { "cv": "", "github": "", "email": "" }
 }
