@@ -185,7 +185,7 @@ function Home() {
           <div className="skill-group">
             <div className="skill-group-head"><span className="eyebrow">HARD / TECH SKILLS</span><small>{skills.hard.length}</small></div>
             {skills.hard.map(s=><div className="skill-card" key={s.name}>
-              <div className="skill-head"><span>{s.icon} {s.name}</span>{s.level && <b>{s.level}%</b>}</div>
+              <div className="skill-head"><span>{s.icon} {s.name}</span></div>
               <p className="skill-note">{s.note}</p>
               <SkillLinks projects={s.projects} background={s.background} caseLink={s.caseLink} />
             </div>)}
