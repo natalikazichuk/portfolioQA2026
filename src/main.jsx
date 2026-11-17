@@ -13,7 +13,9 @@ const projectLinks = {
   'snake-eye': 'https://github.com/natalikazichuk/Snake-Eye',
   // демо-версія (1 клас, без реєстрації); повний код — natalikazichuk/schoolkingdoms
   schoolkingdoms: 'https://natalikazichuk.github.io/schoolkingdoms-demo/',
-  rozklad: 'https://natalikazichuk.github.io/rozklad/'
+  rozklad: 'https://natalikazichuk.github.io/rozklad/',
+  // застосунок (PWA); APK для Android — у README репозиторію natalikazichuk/chasyk
+  chasyk: 'https://natalikazichuk.github.io/chasyk/'
 };
 
 const projectTitle = Object.fromEntries(projects.map(p => [p.id, p.title]));
@@ -171,7 +173,7 @@ function Home() {
       </section>
 
       <Collapsible id="projects" eyebrow="01 / EXPERIENCE" title="QA Projects"
-        intro="Hands-on testing across web applications, a business SaaS, a banking app, data projects and an educational platform.">
+        intro="Hands-on testing across web applications, a business SaaS, a banking app, data projects, an educational platform and a kids’ time-tracker app (PWA + Android).">
         <div className="project-grid">{projects.map((p,i)=><ProjectCard p={p} index={i} key={p.id}/>)}</div>
       </Collapsible>
 
